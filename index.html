@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="utf-8" />
+            <title>瑞肯材料科技有限公司</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+            <meta name="description", content="瑞肯材料科技有限公司於2011年設立，為ISO9001認證公司，主要以環氧樹脂配方產品及紫外線固化樹脂之生產及銷售為核心業務，產品之主要應用為工業用接著劑、電氣絕緣澆注材料、電子灌封材料及光電材料等。"/>
+            <meta name="keyword" content="瑞肯材料, 瑞肯材料科技有限公司, Raychem Material Technology Corporation Limited, raychem, 環氧樹酯, epoxy"/>
+            <link rel="stylesheet" href="css/style.css"/>
+            <!-- load fonts -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- header & navbar -->
+        <div class="header">
+            <a href="#home"><img class="logo" src="img/raychem-logo.png" alt="logo", title="logo"></a>
+            <nav>
+                <ul class="nav_links">
+                    <!-- <li ><a href="#home">首頁</a></li> -->
+                    <li><a text-key="nav-about" href="#about">關於</a></li>
+                    <li><a text-key="nav-product" href="#product-and-service">產品</a></li>
+                    <li><a text-key="nav-contact" href="#contact">聯絡資訊</a></li>
+                </ul>
+            </nav>
+            <div class="controls">
+                <button class="lang_switch" id="langBtn" text-key="lang-button" onclick="switchLanguage()">EN</button>
+                <img id="themeIcon" src="img/darkmode.png" alt="Dark mode" onclick="changeTheme()">
+            </div>
+        </div>
+
+        <!-- home (testing) -->
+        <div class="home" id="home">
+            <h1 class="banner" id="banner" text-key="banner">瀚 聯 科 技</h1>
+            <video autoplay muted loop plays-inline class="background-video" id="background-video">
+                <source src="/video/molecules.m4v" type="video/mp4"/>
+            </video>
+        </div>
+
+        <!-- content -->
+        <div class="content">
+            <!-- <div id="home" style="height: 1px"></div>
+                <div class="home">
+                    <div class="home-title">
+                        瀚聯科技
+                    </div>
+                    <div class="home-img">
+                        圖片
+                    </div>
+                </div> -->
+                
+            <div id="about" style="height: 1px"></div>
+            <div class="about">
+                <div class="about-title" text-key="about-title">關於</div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p text-key="about-p1">瑞肯材料科技有限公司於2011年設立，為ISO9001認證公司，主要以環氧樹脂配方產品及紫外線固化樹脂之生產及銷售為核心業務，產品之主要應用為工業用接著劑、電氣絕緣澆注材料、電子灌封材料及光電材料等。</p>
+                    </div>
+                    <div class="iso-certificate">
+                        <p class="iso-caption" text-key="iso-caption">ISO9001證書</p>
+                        <img src="img/ISO證書_瑞肯材料2021~2024.jpg" style="width: 200px;">
+                    </div>
+                </div>
+                
+                <div class="about-img">
+                    <img src="img/epoxy.png" />
+                </div>
+            </div>
+            
+            <div id="product-and-service" style="height: 1px"></div>
+            <div class="product-and-service">
+                <div class="product-and-service-title" text-key="product-and-service-title">
+                    產品
+                </div>
+                <div class="product">
+                    <div class="product-text">
+                        <p style="margin-bottom: 40px;" text-key="product-p0">我們的強項是跟客戶一起合作開發出符合客戶需求之配方產品，產品應用範圍廣泛，目前已下列2系列為主：</p>
+                        <p style="margin-bottom: 40px;" text-key="product-p1">(1) 環氧樹脂配方產品：結構接著劑、電機澆注樹脂、電子灌封樹脂。</p>
+                        <p style="margin-bottom: 40px;" text-key="product-p2">(2) UV固化樹脂配方產品：光學級壓克力樹脂應用於光電產業</p>
+                    </div>
+                </div>
+                <div class="product-img">
+                    <p text-key="product-img1">電池膠</p>
+                    <img class="first" src="img/adhesive.jpg" />
+                    <!-- <img class="first" src="img/" /> -->
+                    <!-- <img class="first" src="img/" /> -->
+                    <!-- <p text-key="product-img2"></p> -->
+                    <!-- <img class="second" src="img/" /> -->
+                    <!-- <img class="second" src="img/" /> -->
+                    <p text-key="product-img3">變壓器澆注材料</p>
+                    <img class="third" src="img/transformer.png" />
+                </div>
+
+            </div>
+        </div>
+
+        <div id="contact" style="height: 1px"></div>
+        <div class="contact">
+            <div class="contact-title" text-key="contact-title">
+                聯絡資訊
+            </div>
+            <ul class="contact_list">
+                <li text-key="tel">電話：02-2686-5111</li>
+                <li text-key="fax">傳真：02-2685-2000</li>
+                <li text-key="email"><a href="mailto:js.chung@msa.hinet.net">電子郵件：js.chung@msa.hinet.net</a></li>
+                <li text-key="address"><a href="https://www.google.com.tw/maps/place/%E7%80%9A%E8%81%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@24.9936109,121.4207038,17z/data=!4m5!3m4!1s0x34681d3fd6700d37:0x94bbb2dbb9a831b0!8m2!3d24.9936061!4d121.4228925?hl=zh-TW&authuser=0">地址：新北市樹林區長壽街15-5號4F</a></li>
+            </ul>
+            <!-- <div>
+                <iframe style="margin: 20px; border: none;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.1914149784907!2d121.4207038147808!3d24.993610946063722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681d3fd6700d37%3A0x94bbb2dbb9a831b0!2z54Ca6IGv56eR5oqA5pyJ6ZmQ5YWs5Y-4!5e0!3m2!1szh-TW!2stw!4v1641459742138!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div> -->
+        </div>
+
+        <!-- icon attributions -->
+        <!-- <div> undefined <a href="https://www.flaticon.com/authors/adriansyah" title="adriansyah"> adriansyah </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div>
+        <div> Icons made by <a href="https://www.flaticon.com/authors/handicon" title="Handicon"> Handicon </a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com'</a></div> -->
+        
+        <!-- load scripts -->
+        <script src="script/switchLanguage.js"></script>
+        <script src="script/changeTheme.js"></script>
+
+    </body>
+</html>

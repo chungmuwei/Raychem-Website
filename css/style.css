@@ -1,0 +1,693 @@
+
+* {
+    /* box-sizing: border-box; */
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --link-color: darkblue;
+    --image-caption-color: darkblue;
+
+    --body-background-color: white;
+    --nav-backgroud-color: lightblue;
+    --button-background-color: darkblue;
+    --hover-color: rgba(0, 0, 139, 0.8);
+    --content-background-color: whitesmoke;
+}
+
+.dark-theme {
+    --primary-color: rgb(245, 245, 245);
+    --secondary-color: black;
+    --link-color: lightblue;
+    --image-caption-color: lightblue;
+
+    --body-background-color: black;
+    --nav-backgroud-color: hsl(240, 80%, 30%);
+    --button-background-color: lightblue;
+    --hover-color: rgba(173, 216, 230, 0.8);
+    --content-background-color: rgb(40, 40, 40);
+}
+
+body {
+    background-color: var(--body-background-color);
+    /* background: linear-gradient(rgb(255, 72, 0), rgb(0, 68, 255)); */
+}
+
+li, a, button {
+    text-decoration: none;
+}
+
+/* 1. header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed; 
+    top: 0px;
+    width: 94%;
+    align-items: center;
+    margin: 0px;
+    padding: 5px 3%;
+    background-color: var(--nav-backgroud-color);
+}
+/* 1.1 logo */
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+/* 1.2 navigation bar */
+nav {
+    font-size: 25px;
+}
+.nav_links {
+    list-style: none;
+}
+.nav_links li {
+    display: inline-block;
+    vertical-align: center;
+    padding: 0px 30px;
+}
+.nav_links li a {
+    color: var(--primary-color);
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+    color: var(--hover-color);
+}
+
+/* 1.3 control panals: language and mode buttons */
+.controls {
+    display: flex;
+    align-items: center;
+    /* margin: 0; */
+}
+
+#langBtn {
+    padding: 8px 10px;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 20px;
+    margin-right: 10px;
+    background-color: var(--button-background-color);
+}
+
+#themeIcon {
+    /* padding: 8px 10px; */
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: var(--nav-backgroud-color);
+    width: 24px;
+    height: 24px;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+
+    .logo {
+        width: 100px;
+    }
+    nav {
+        font-size: 20px;
+    }
+    .nav_links li {
+        padding: 0px 15px;
+    }
+    .nav_links li a {
+        padding: 0px 15px;
+    }
+    #langBtn {
+        padding: 6px 8px;
+        border-radius: 35px;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    #themeIcon {
+        /* padding: 6px 8px; */
+        margin-left: 10px;
+        cursor: pointer;
+        background-color: var(--nav-backgroud-color);
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* phone */
+@media screen and (max-width: 800px) {
+    .logo {
+        width: 75px;
+        position: relative;
+        top: 2px;
+    }
+    .nav_links li {
+        padding: 0px 4px;
+        position: relative;
+    }
+    .nav_links li a {
+        font-size: 16px;
+        padding: 0px 4px;
+    }
+    
+    #langBtn {
+        padding: 4px 5px;
+        border-radius: 35px;
+        font-size: 15px;
+        margin-right: 5px;
+    }
+    
+    #themeIcon {
+        /* padding: 4px 5px; */
+        margin-left: 5px;
+        cursor: pointer;
+        background-color: var(--nav-backgroud-color);
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* small phone */
+@media screen and (max-width: 500px) {
+    .header {
+        width: 98%;
+        padding: 2px 1%;
+    }
+
+    .logo {
+        width: 50px;
+        position: relative;
+        top: 2px;
+    }
+    .nav_links li {
+        padding: 0px 2px;
+        position: relative;
+        top: -2px;
+    }
+    .nav_links li a {
+        font-size: 14px;
+    }
+
+    #langBtn {
+        padding: 4px 5px;
+        border-radius: 25px;
+        font-size: 10px;
+        margin-right: 3px;
+    }
+    
+    #themeIcon {
+        padding: 4px 5px;
+        margin-left: 3px;
+        cursor: pointer;
+        background-color: var(--nav-backgroud-color);
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* ------------------------------------------- */
+
+/* 2. content */
+
+.content {
+    width: 1200px; 
+    margin:auto;
+    text-align: justify;
+    text-justify:inter-ideograph;
+}
+
+/* home (testing) 手機上排版仍有問題故先隱藏*/
+.home {
+    /* position: fixed; */
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+    height: 100vh;  /* viewport height */
+}
+.banner {
+    font-size: 150px;
+    font-weight: 400;
+    font-stretch: ultra-expanded;
+    text-align: center;
+
+    /* enforce text to overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+
+    color: white;
+    transition: 0.5s;
+}
+.banner:hover {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+.background-video {
+    position: absolute;
+    /* 讓影片不回超出右視窗右方與下方 */
+    right: 0;
+    bottom: 0;
+    /* 將影片設為堆疊的最後才不會遮擋標題文字 */
+    z-index: -1;
+    transition: 0.5;
+}
+
+/* @media (min-aspect-ratio: 16/9) {
+    .background-video {
+        width: 100%;
+        height: auto;
+    }
+} */
+@media (max-aspect-ratio: 16/9) {
+    .background-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.about, .product-and-service, .contact{
+    background-color: var(--content-background-color);
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* align-items: top; */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.home-title, .about-title, .product-and-service-title, .contact-title {
+    flex: none;
+    width:1200px;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.contact-title {
+    width:100%;
+}
+
+.home-text, .about-content, .product-text {
+    flex: none;
+    width: 580px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight:normal;
+    line-height: 40px;
+    color: var(--primary-color);
+    /* 文字左右對齊 */
+    text-align: justify;
+    text-justify:inter-ideograph;
+    /* border: 3px blue solid; */
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-text, iso-certificate {
+    justify-content: center;
+}
+
+.iso-caption {
+    text-align: center; 
+    font-weight: bold;
+}
+
+.home-img, .about-img {
+    flex: none;
+    width: 600px;
+    text-align: center;
+}
+
+/* product */
+.product, .service {
+    flex: none;
+    width: 700px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: left;   
+}
+.product .product-title, .service .service-title {
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+.service-title2 {
+    font-weight: bold;
+    font-size: 22px;
+}
+.product .product-text, .service .service-text {
+    flex: 3;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+    line-height: 40px;
+    /* 文字左右對齊 */
+    text-align: justify;
+    text-justify:inter-ideograph;
+}
+
+/* service */
+.service .service-text a {
+    color: var(--link-color);
+}
+.service .service-text ul {
+    padding-left: 30px;
+}
+.product-img, .service-img {
+    flex: 2;
+    color: var(--image-caption-color);
+    text-align: center;
+}
+.product-img p, .service-img p {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.product-img .first {
+    height: 150px;
+}
+.product-img .second {
+    height: 125px;
+}
+.product-img .third {
+    height: 200px;
+}
+.service-img {
+    margin-top: 30px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    width: 500px;
+}
+
+/* contact */
+.contact {
+    width: 100%;
+    border-radius: 0%;
+    background-color: var(--nav-backgroud-color);
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.contact_list {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    list-style: none;
+}
+.contact_list li {
+    flex: space-around;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 0px 20px;
+    color: var(--secondary-color);
+    text-align: center;
+    background-color: var(--button-background-color);
+    border-radius: 15px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.contact_list li:hover {
+    font-size:21px;
+    background-color: var(--hover-color);
+}
+.contact_list li a {
+    color: var(--secondary-color);
+}
+.contact_list a li:hover {
+    background-color: var(--hover-color);
+}
+
+/* tablet */
+@media screen and (max-width: 1200px) {
+    .banner {
+        font-size: 125px;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .about, .product-and-service, .contact{
+        border-radius: 18px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .home-title, .about-title, .product-and-service-title, .contact-title {
+        width: 100%;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .home-text, .about-text, .product-text {
+        width: 44%;
+        padding: 3%;
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    .home-img, .about-img {
+        width: 48%;
+        /* font-size: 16px; */
+    }
+    
+    .about-img img {
+        width: 250px;
+    }
+
+    /* product */
+    .product, .service {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .product .product-title, .service .service-title {
+        font-size: 20px;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-bottom: 5px;
+    }
+    .service-title2 {
+        font-size: 18px;
+    }
+    .product .product-text, .service .service-text {
+        width: 98%;
+        padding-left: 1%;
+        padding-right: 1%;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    
+    /* service */
+    
+    .service .service-text ul {
+        padding-left: 30px;
+    }
+    
+    .product-img, .service-img {
+        /* flex: none; */
+        width: 48%;
+        font-size: 16px;
+        margin: 0px;
+        text-align: center;
+    
+    }
+    
+    .product-img p, .service-img p {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .product-img .first {
+        height: 100px;
+    }
+
+    .product-img .second {
+        height: 75px;
+    }
+
+    .product-img .third {
+        height: 150px;
+    }
+
+    .service-img {
+        margin-top: 25px;
+        width: 35%;
+        margin: 7.5%;
+    }
+
+    /* contact */
+    .contact {
+        /* display: block; */
+        border-radius: 0%;
+        margin: 0px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+
+    .contact_list {
+        /* display: block; */
+        flex-wrap: wrap;
+    }
+    
+    .contact_list li {
+        font-size: 12px;
+        padding: 3px 6px;
+        margin: 10px 10px;
+        border-radius: 8px;
+    }
+    
+    .contact_list li:hover {
+        font-size: 13px;
+    }
+}
+
+/* phone */
+@media screen and (max-width: 800px) {
+    .home {
+        font-size: 100px;
+    }
+    .content{
+        width: 100%;
+    }
+
+    .about, .product-and-service, .contact{
+        border-radius: 18px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .home-title, .about-title, .product-and-service-title, .contact-title {
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .home-text, .about-text, .product-text {
+        width: 94%;
+        padding: 3%;
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .home-img, .about-img {
+        width: 98%;
+        font-size: 16px;
+    }
+    
+    .about-img img {
+        width: 150px;
+    }
+
+    /* product */
+    .product, .service {
+        width: 98%;
+        margin-bottom: 20px;
+    }
+
+    .product .product-title, .service .service-title {
+        font-size: 18px;
+        padding-left: 1%;
+        padding-right: 1%;
+        margin-bottom: 5px;
+    }
+    .service-title2 {
+        font-size: 16px;
+    }
+    .product .product-text, .service .service-text {
+        width: 98%;
+        font-size: 15px;
+        padding-left: 1%;
+        padding-right: 1%;
+        line-height: 28px;
+    }
+    
+    /* service */
+    
+    .service .service-text ul {
+        padding-left: 30px;
+    }
+    
+    .product-img, .service-img {
+        flex: none;
+        width: 98%;
+        font-size: 16px;
+        margin: 0px;
+        text-align: center;
+    
+    }
+    .service-img {
+        width: 48%;
+    }
+    .product-img p, .service-img p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .product-img .first {
+        height: 75px;
+    }
+
+    .product-img .second {
+        height: 67.5px;
+    }
+
+    .product-img .third {
+        height: 100px;
+    }
+
+    .service-img {
+        margin-top: 15px;
+        width: 250px;
+    }
+
+    /* contact */
+    .contact {
+        /* display: block; */
+        border-radius: 0%;
+        margin: 0px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+    }
+
+    .contact_list {
+        /* display: block; */
+        flex-wrap: wrap;
+    }
+    
+    .contact_list li {
+        font-size: 10px;
+        padding: 2.5px 5px;
+        margin: 10px 10px;
+        border-radius: 7.5px;
+    }
+    
+    .contact_list li:hover {
+        font-size: 11px;
+    }
+}
