@@ -12,14 +12,14 @@ let languageData = {
             "banner": "Raychem Co.",
             // about
             "about-title": "About",
-            "about-p1": "Raychem Material Technology Co., Ltd. was found in 2011. We are a ISO9001 certificated company. Our products are Epoxy formulation products for  Electric Industry &  Electronics Industry and UV curing products for Optical-electronic Industry.",
+            "about-p1": "Raychem Material Technology Co., Ltd. was founded in 2011. We are an ISO9001 certificated company. Our products are Epoxy formulation products for  Electric Industry &  Electronics Industry and UV curing products for Opto-electronics Industry.",
             "iso-caption": "ISO9001 Certificate",
             // products
             "product-and-service-title": "Products",
             // products
             "product-p0": "Our expertise is to develop the tailor made formulation products with customers. We have two product ranges for different market as below:",
-            "product-p1": "(1) EPOXY resin formulation products for structure adhesives、electric casting materials and electronic encapsulants.",
-            "product-p2": "(2) UV acrylic resin formulation products for optical industry.",
+            "product-p1": "(1) EPOXY resin formulation products for structure adhesives, electric casting materials, and electronic encapsulants.",
+            "product-p2": "(2) UV acrylic resin formulation products for opto-electronics industry.",
             
             
             // "product-img1": "ADD TEXT HERE",
@@ -55,7 +55,7 @@ let languageData = {
             // products & services
             "product-and-service-title": "產品",
 
-            "product-p0": "我們的強項是跟客戶一起合作開發出符合客戶需求之配方產品，產品應用範圍廣泛，目前已下列2系列為主：",
+            "product-p0": "我們的強項是跟客戶一起合作開發出符合客戶需求之配方產品，產品應用範圍廣泛，目前以下列兩系列為主：",
             "product-p1": "(1) 環氧樹脂配方產品：結構接著劑、電機澆注樹脂、電子灌封樹脂。",
             "product-p2": "(2) UV固化樹脂配方產品：光學級壓克力樹脂應用於光電產業",
 
