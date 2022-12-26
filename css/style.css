@@ -33,6 +33,32 @@
     --content-background-color: rgb(40, 40, 40);
 }
 
+/* Try different color theme */
+:root {
+    --primary-color: #06283D;
+    --secondary-color: #E8F9FD;
+    --link-color: #0035b9;
+    --image-caption-color: #0035b9;
+
+    --body-background-color: #E8F9FD;
+    --nav-backgroud-color: #79DAE8;
+    --button-background-color: #001E6C;
+    --hover-color: #0035b9;
+    --content-background-color: #dfeff3;
+}
+.dark-theme {
+    --primary-color: #E8F9FD;
+    --secondary-color: #06283D;
+    --link-color: #79DAE8;
+    --image-caption-color: #79DAE8;
+
+    --body-background-color: black;
+    --nav-backgroud-color: #001E6C;
+    --button-background-color: #79DAE8;
+    --hover-color: #65b8c5;
+    --content-background-color: #06283D;
+}
+
 body {
     background-color: var(--body-background-color);
     /* background: linear-gradient(rgb(255, 72, 0), rgb(0, 68, 255)); */
