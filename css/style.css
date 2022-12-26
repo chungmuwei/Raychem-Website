@@ -81,9 +81,17 @@ li, a, button {
     background-color: var(--nav-backgroud-color);
 }
 /* 1.1 logo */
+
+.header a {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
 .logo {
     width: 150px;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 /* 1.2 navigation bar */
@@ -142,7 +150,7 @@ button:hover {
 @media screen and (max-width: 1024px) {
 
     .logo {
-        width: 100px;
+        width: 125px;
     }
     nav {
         font-size: 20px;
@@ -172,9 +180,8 @@ button:hover {
 /* phone */
 @media screen and (max-width: 800px) {
     .logo {
-        width: 75px;
+        width: 90px;
         position: relative;
-        top: 2px;
     }
     .nav_links li {
         padding: 0px 4px;
@@ -210,14 +217,12 @@ button:hover {
     }
 
     .logo {
-        width: 50px;
+        width: 65px;
         position: relative;
-        top: 2px;
     }
     .nav_links li {
         padding: 0px 2px;
         position: relative;
-        top: -2px;
     }
     .nav_links li a {
         font-size: 14px;
@@ -329,7 +334,7 @@ button:hover {
 }
 
 .home-text, .about-content, .product-text {
-    flex: none;
+    flex: initial;
     width: 580px;
     padding: 10px;
     font-size: 20px;
